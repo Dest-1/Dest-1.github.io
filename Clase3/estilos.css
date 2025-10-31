@@ -1,0 +1,149 @@
+body{
+    background-color: rgb(167, 234, 255);
+}
+
+h1{
+    background-color: rgb(127, 255, 182);
+    color: rgb(12, 12, 221);
+}
+
+#h1_primero{
+    font-size: 40px;
+    font-family: cursive;
+    font-style: italic;
+}
+
+.principal{
+    color: rgb(221, 12, 12);
+}
+
+#titulo1{
+    color: rgb(140, 0, 255);
+    font-style: italic;
+}
+
+#titulo2{
+    color: rgb(255, 145, 0);
+}
+
+h2{
+    color: rgb(0, 124, 81);
+}
+
+p{
+    color: rgb(0, 13, 54);
+    text-align: center;
+    font-family: cursive;
+    font-size: 30px;
+}
+
+#p_primero{
+    font-family: cursive;
+    font-weight: bold;
+}
+
+.caja{
+    width: 500px;
+    height: 200px; 
+    margin: 10px; 
+    /* margin, distancia con los elementos externos, tiene parametros de margen para arriba, abajo, derecha o izquierda*/
+    padding: 20px;
+    /* padding, distancia con los elementos internos tiene parametros de margen para arriba, abajo, derecha o izquierda*/
+    border: 2px dotted black;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: space-around;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+
+/* Hacer diseño responsivo */
+@media(max-width: 600px){
+
+    .contenedor{
+        width: 100%;
+        flex-direction: column;
+    }
+    .caja{
+        width: 300px;
+    }
+}
+
+
+.grid-item{
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+.grid-item:hover{
+    background-color: rgb(255, 206, 43);
+    font-size: x-large;
+    animation: mover 1s;
+}
+
+.image{
+    text-align: center;
+}
+
+@keyframes mover {
+    0%{transform: translateX(0);}
+    100%{transform: translateX(100px);}
+}
+
+@keyframes girar {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+}
+div {
+    animation: girar 2s linear;
+}
+
+table {
+        width: 100%;
+        border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #000000;
+    text-align: left;
+}
+
+th {
+    background-color: #009dff52;
+    color: rgb(0, 0, 98);
+}
+
+td{
+    background-color: rgba(131, 173, 210, 0.415);
+}
+
+
+form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+label{
+    color: rgb(0, 13, 54);
+    font-family: monospace;
+    font-size: 30px;
+}
+
+input, select, option, button{
+
+    font-family: monospace;
+    font-size: 20px;
+}
