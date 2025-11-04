@@ -1,5 +1,10 @@
 body{
-    background-color: rgb(167, 234, 255);
+    /* background-color: rgb(167, 234, 255); */
+    background-image: url('fondo.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    height: 100vh; 
+    /* color: white; color del texto a menos que las etiquetas de t4exto tengan estilo propio */
 }
 
 h1{
@@ -147,3 +152,4 @@ input, select, option, button{
     font-family: monospace;
     font-size: 20px;
 }
+
