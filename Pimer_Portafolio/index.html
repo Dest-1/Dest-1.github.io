@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Turismo Valledupar</title>
+    <link rel="stylesheet" href="estilos.css">
+     <!-- Enlace a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- https://colombia.co/gran-caribe-colombiano/cesar/valledupar -->
+</head>
+<body>
+    <header>
+        <h1>Guia de Turismo Valledupar</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre Valledupar</a></li>
+                <li><a href="#portfolio">Sitios</a></li>
+                <li><a href="#ubications">Ubicaciones</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>Capital Mundial del Vallenato</h2>
+        <p>La ciudad se encuentra en un valle que formó parte de los dominios del célebre cacique de Upar, personaje icónico de la historia indígena, de ahí el nombre Valledupar. Es uno de los principales centros agroindustriales y mineros de Colombia.​Valledupar también es conocida por ser la cuna del vallenato, un género musical al que los intérpretes del Gran Caribe Colombiano entregan sus mejores acordes para el deleite del mundo entero. ¡Que lo digan todos los que disfrutan del Festival de la Leyenda Vallenata, la celebración para la cual los acordeones de toda Colombia se afinan!​</p>
+    </section>
+
+        <section id="carrusel">
+        <div id="miCarrusel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- Imágenes -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="Plaza_Valledupar.jpg" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                <img src="plaza-panormica.jpeg" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                <img src="santo ecce homo.jpeg" class="d-block w-100" alt="Imagen 3">
+                </div>
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#miCarrusel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#miCarrusel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portafolio</h2>
+        <div class="gallery">
+            <div class="project">
+                <img src="plaza.jpg" alt="Plaza Alfonso Lopez">
+                <p>Corazón histórico de Valledupar, rodeada de arquitectura colonial y llena de vida. En su centro, la tarima “Francisco El Hombre” vibra con los sonidos del vallenato, haciendo de este lugar un punto imperdible para disfrutar la cultura y tradición vallenata.</p>
+            </div>
+            <div class="project">
+                <img src="hurtado.jpg" alt="Balneario Hurtado">
+                <p>A orillas del río Guatapurí, el Balneario Hurtado es un paraíso natural de aguas cristalinas. Ideal para refrescarse, disfrutar de la brisa y vivir el espíritu alegre de los vallenatos entre música, risas y naturaleza.</p>
+            </div>
+            <div class="project">
+                <img src="catedral.jpeg" alt="Catedral Santo Ecce Homo">
+                <p>Imponente joya arquitectónica en el centro de Valledupar, la Catedral Santo Ecce Homo combina historia, fe y belleza. Su interior sereno invita al recogimiento, mientras su fachada es un símbolo del patrimonio espiritual de la ciudad.</p>
+            </div>
+            <div class="project">
+                <img src="parque.jpeg" alt="Parque de la Leyenda Vallenata">
+                <p>Escenario emblemático del Festival de la Leyenda Vallenata, este parque celebra el folclor y la música tradicional. Con amplios espacios y ambiente festivo, es el alma cultural de Valledupar, donde el acordeón cobra vida cada año.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="ubications">
+        <h2>Ubicaciones</h2>
+        <div class="ubicacion">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62775.32978914898!2d-73.25824945!3d10.464505999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8ab9b5d6cf71d7%3A0x84a43625b14c234a!2sValledupar%2C%20Cesar!5e0!3m2!1ses-419!2sco!4v1762274408434!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contacto</h2>
+        <div class="contacto">
+            <form action="/submit" method="post">
+                <label for="name">Nombre: </label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Correo electrónico: </label>
+                <input type="email" name="email" id="email" required><br>
+                <label for="message">Mensaje: </label>
+                <textarea name="message" id="message" required></textarea><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
