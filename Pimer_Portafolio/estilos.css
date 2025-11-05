@@ -1,5 +1,5 @@
 body{
-    font-family: arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -7,13 +7,17 @@ body{
 
 /* Encabezado */
 header{
-    background-image: url(Fondo.png);
+    background-image: url(imagenes/Fondo.png);
     background-size: cover;
     /* background: #333; */
     color: #fff;
     text-shadow: 2px 2px 4px #333;
     padding: 20px 0;
     text-align: center;
+}
+
+h2{
+    padding: 40px;
 }
 
 nav ul{
@@ -33,12 +37,14 @@ nav ul li a{
 
 /* Sobre nosotros */
 #about{
-    padding: 20px;
-    background: #f4f4f4;
+    padding: 40px;
+    border-radius: 10px;
+    height: 370px;
 }
 
 #about h2{
     margin-top: 0;
+    
 }
 
 /* Galeria */
@@ -51,17 +57,53 @@ nav ul li a{
 
 /* Portafolio */
 .project{
+    position: relative;
     width: 300px;
     padding: 10px;
     background: #fff;
     border: 1px solid #ddd;
     text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.project:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
 }
 
 .project img{
     max-width: 100%;
     height: 200px;
     object-fit: cover;
+}
+
+.project p{
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+
+.project a{
+    position: absolute;
+    bottom: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: -50px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease;
+    text-align: end;
+}
+
+.project a:hover{
+    background: #2fb4cc;
+    color: #fff;
 }
 
 /* ubicaciones */
@@ -72,7 +114,20 @@ nav ul li a{
 
 /* Contactenos */
 .contact{
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-left: 30%;
+    width: 600px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    text-align: left;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+form{
+    border-radius: 4px;
 }
 
 form{
@@ -97,10 +152,7 @@ form input[type="submit"]{
     cursor: pointer;
 }
 
-.contacto{
-    display: flex;
-    justify-content: center;
-}
+
 
 /* Responsive */
 @media(max-width: 600px){
@@ -119,4 +171,30 @@ form input[type="submit"]{
         flex-direction: column;
         align-items: center;
     }
+
+    .contact{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+div{
+    border-radius: 10px;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: space-around;
+}
+
+.caja1{
+    width: 75%;
+    height: 100%;
+    margin: 10px; 
+}
+
+.caja2{
+    width: 100%; 
+    height: 100%;
+    margin: 10px; 
 }
