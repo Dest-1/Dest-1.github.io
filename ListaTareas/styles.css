@@ -1,0 +1,73 @@
+ :root {
+        --white: #fafafb;
+        --purple:#9a67ea;
+        --blue-light:#04d4c3;
+        --blue-dark:#2a73c2;
+        --green: #2c7b90;
+ }
+body {
+    background: linear-gradient(to bottom, var(--blue-dark) , var(--blue-light));
+    height: 100vh;
+    font-family: 'Prompt', sans-serif;
+}
+
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    color: var(--white);
+    font-family: 'Prompt', sans-serif;
+}
+
+.contenedor input{
+    width: 400px;
+}
+
+.contenedor .boton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tareas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+    color: var(--white);
+    font-family: 'Prompt', sans-serif;
+}
+
+input{
+    font-family: 'Prompt', sans-serif;
+    border-radius: 5px;
+    border: none;
+    margin: 1px;
+}
+
+button{
+    margin-top: 5px;
+    width: 150px;
+    font-family: 'Prompt', sans-serif;
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover{
+    background-color: var(--purple);
+    color: #fafafb;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+li{
+    border-radius: 5px;
+    /* background-color: #04d4c3; */
+}

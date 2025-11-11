@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Lista de tareas</h1>
+        <input type="text" id="tarea" placeholder="Ingrese una nueva tarea">
+        <input type="date" name="fecha" id="fecha">
+        <div class="boton">
+            <button onclick="guardar_tarea()">Guardar Tarea</button>
+        </div>
+    </div>
+
+    <div class="tareas">
+        <h2>Tareas pendientes</h2>
+        <ol id="lista_tareas">
+        </ol>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
