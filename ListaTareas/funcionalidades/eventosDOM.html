@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <link rel="stylesheet" href="evento.css">
+</head>
+<body>
+
+    <div id="miCaja">
+        <h1>Titulo Principal</h1>
+    </div>
+    <div>
+        <button onclick="mostrar()">Mostrar</button>
+        <button onclick="ocultar()">Ocultar</button>
+    </div>
+
+    <script>
+        const caja = document.getElementById("miCaja")
+        function mostrar(){
+            //caja.style.display = "block" //Se muestra el bloque en pantalla
+            caja.classList.add("highlight") //Aplica la clase highlight de CSS
+            //caja.classList.toggle("highlight") //Alterna la clase highlight de CSS, si esta inactivo lo habilita y viceversa
+        }
+
+        function ocultar(){
+            //caja.style.display = "none" //Desaparece el bloque
+            caja.classList.remove("highlight") //Elimina la clase highlight de CSS
+        }
+
+    </script>
+
+    
+</body>
+</html>

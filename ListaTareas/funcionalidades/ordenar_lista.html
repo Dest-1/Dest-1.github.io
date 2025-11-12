@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenar</title>
+</head>
+<body>
+
+    <script>
+        lista = [2,6,4,3,12,13,25,67,89,90,54,76,87,91]
+        pares = []
+        ordenados = []
+
+        //Obtener pares
+        for (let i = 0; i < lista.length; i++) {
+            if(lista[i] % 2 == 0){
+                pares.push(lista[i])
+                
+            }
+        }
+        console.log(pares)
+        
+        //Ordenar lista ascendente
+
+        // a = 5
+        // b = 3
+        // c = 10
+
+        // let menor
+
+        // if (a < b){
+        //     menor = a
+        // }else{
+        //     menor = b
+        // }
+        // if (menor > c){
+        //     menor = c
+        // }
+        // console.log(menor)
+
+        //lista = [2,6,4,3,12,13,25,67,89,90,54,76,87,91]
+        for (let i = 0; i < lista.length; i++) {
+            for (let j = 0; j < lista.length; j++) {
+                a = lista[i]
+                b = lista[j]
+                if(a < b){
+                    lista[i] = b
+                    lista[j] = a
+                }  
+            }
+        }
+        console.log(lista)
+
+
+    </script>
+    
+</body>
+</html>

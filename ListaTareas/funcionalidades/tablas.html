@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Tabla de multiplicar</h1>
+
+    <h2>Tabla del 2</h2>
+    <table></table>
+    <ul id="tabla2">
+
+    </ul>
+
+    <script>
+
+        const tabla = document.querySelector("table")
+
+        for (let i = 0; i < 13; i++) {
+            resultado = ("2" + " * " + i + " = " +  2*i)
+            const fila = document.createElement("tr")
+            const columna_1 = document.createElement("td")
+            const columna_2 = document.createElement("td")
+
+            columna_1.textContent = "2 * " + i
+            columna_2.textContent = 2 * i
+            fila.appendChild(columna_1)
+            fila.appendChild(columna_2)
+            tabla.appendChild(fila)
+        }
+        
+
+    </script>
+</body>
+</html>

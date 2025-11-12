@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body onload="prueba()">
+
+    <button id="miBoton">Boton</button>
+
+    <form action="" id="miFormulario">
+        <input type="text" id="text" placeholder="Ingrese un texto">
+    <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+
+        function prueba(){
+            alert("La  función se ejecuta al iniciar la pagina")
+        }
+        // Seleccionar un elemento
+        let boton = document.getElementById("miBoton");
+
+        // // Agregar un evento de clic
+        // boton.addEventListener("click", function() {
+        //     alert("¡Botón clickeado!");
+        // });
+
+        document.addEventListener("keydown", function(evento) {
+        console.log("Tecla presionada: " + evento.key);
+        });
+
+        let formulario = document.getElementById("miFormulario");
+
+        formulario.addEventListener("submit", function(evento) {
+            evento.preventDefault();  // Evita que el formulario se envíe
+            alert("Formulario enviado");
+        });
+
+    </script>
+    
+</body>
+</html>

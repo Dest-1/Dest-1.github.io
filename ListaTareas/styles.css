@@ -1,4 +1,4 @@
- :root {
+:root {
         --white: #fafafb;
         --purple:#9a67ea;
         --blue-light:#04d4c3;
@@ -70,4 +70,18 @@ button:hover{
 li{
     border-radius: 5px;
     /* background-color: #04d4c3; */
+}
+
+
+tr td{
+    border: var(--white);
+    border-style: solid;
+    margin-right: 4px;
+    padding: 1px;
+}
+
+#tablas{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 2%
 }

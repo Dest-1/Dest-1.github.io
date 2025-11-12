@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch Case</title>
+</head>
+<body>
+    <input type="text" name="dia" id="dia">
+    <button onclick="evaluar()">evaluar</button>
+
+
+    <script>
+        function evaluar(){
+            let dia = parseInt( document.getElementById("dia").value)
+            console.log(dia)
+
+            switch (dia) {
+                case 1:
+                    alert("Lunes");
+                    break;
+                case 2:
+                    alert("Martes");
+                    break;
+                case 3:
+                    alert("Miércoles");
+                    break;
+                case 4:
+                    alert("Jueves");
+                    break;
+                case 5:
+                    alert("Viernes");
+                    break;
+                case 6:
+                    alert("Sábado");
+                    break;
+                case 7:
+                    alert("Domingo");
+                    break;
+                default:
+                    console.log(dia)
+                    alert("Día no válido");
+            }
+        }
+    </script>
+    
+</body>
+</html>
