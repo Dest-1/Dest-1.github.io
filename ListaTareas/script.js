@@ -11,6 +11,7 @@ function guardar_tarea(){
     let fecha_actual = new Date()
     fecha_actual.getDate()
     let fecha_tarea = Date.parse(txt_fecha)
+    
 
 
     if(txt_tarea == "" || txt_fecha == null || txt_fecha == ""){
@@ -21,14 +22,20 @@ function guardar_tarea(){
         alert("No se pueden crear tareas para fechas pasadas")
         
         }else{
+            // fecha_tarea.Date.toLocaleDateString(undefined, options)
+            // console.log(fecha_tarea)
             const nueva_tarea = document.createElement("li")
-            nueva_tarea.textContent = txt_tarea + " - " + txt_fecha
+
+            nueva_tarea.innerHTML = `<li>
+                                    <i class="far fa-circle co" data="realizado" id="0"></i>
+                                    <p>${fecha_tarea}: ${txt_tarea}</p>
+                                    <i class="fas fa-trash de" data="eliminado" id="0"></i>
+                                </li>`
             tareas.appendChild(nueva_tarea)
             tarea.value = ""
             fecha.value = ""
         }
     }
-
     
 
 }

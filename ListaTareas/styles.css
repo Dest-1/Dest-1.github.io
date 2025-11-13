@@ -5,16 +5,30 @@
         --blue-dark:#2a73c2;
         --green: #2c7b90;
  }
+
 body {
     background: linear-gradient(to bottom, var(--blue-dark) , var(--blue-light));
     height: 100vh;
     font-family: 'Prompt', sans-serif;
 }
 
-
-.contenedor{
+.inicio{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    color: var(--white);
+    font-family: 'Prompt', sans-serif;
+}
+
+.inicio h1{
+    font-size: 50px;
+}
+
+.crear_tarea{
+    display: flex;
+    flex-direction: row;
     align-items: center;
     width: 50%;
     margin-left: 25%;
@@ -23,14 +37,28 @@ body {
     font-family: 'Prompt', sans-serif;
 }
 
-.contenedor input{
+.crear_tarea #tarea{
     width: 400px;
+    height: 30px;
 }
 
-.contenedor .boton{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.crear_tarea #fecha{
+    width: 120px;
+    height: 32px;
+}
+
+.crear_tarea #añadir{
+    font-size: 30px;
+    margin-left: 3px;
+}
+
+.crear_tarea i{
+    color: var(--white);
+}
+
+.crear_tarea i:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .tareas{
@@ -44,6 +72,18 @@ body {
     color: var(--white);
     font-family: 'Prompt', sans-serif;
 }
+
+.tareas li{
+    display: flex;
+    width: 400px;
+    height: 20px;
+    background: linear-gradient(to bottom, var(--green), var(--purple));
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
 
 input{
     font-family: 'Prompt', sans-serif;
