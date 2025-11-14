@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ee">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asincrono</title>
+    <link rel="stylesheet" href="funcionalidades/asincrono.css">
+</head>
+<body>
+    <table class="tabla">
+
+    </table>
+    
+    <script>
+        // // Ejemplo de JavaScript Sincrónico
+        // console.log("Tarea 1");
+        // console.log("Tarea 2");
+        // console.log("Tarea 3");
+
+        // // Ejemplo de JavaScript Asincrónico con setTimeout
+        // console.log("Inicio");
+        // setTimeout(() => {
+        //     console.log("Tarea Asincrónica");
+        // }, 2000);
+        // console.log("Fin");
+
+        // Ejemplo de async/await
+
+        const tabla = document.querySelector(".tabla")
+        async function fetchData() {
+            let respuesta = await fetch('https://jsonplaceholder.typicode.com/posts');
+            let data = await respuesta.json();
+
+            fila_h = document.createElement("tr")
+                col1_h = document.createElement("th")
+                col2_h = document.createElement("th")
+                col3_h = document.createElement("th")
+                col4_h = document.createElement("th")
+
+                col1_h.textContent = "Id"
+                col2_h.textContent = "UserId"
+                col3_h.textContent = "Title"
+                col4_h.textContent = "Body"
+                fila_h.appendChild(col1_h)
+                fila_h.appendChild(col2_h)
+                fila_h.appendChild(col3_h)
+                fila_h.appendChild(col4_h)
+                tabla.appendChild(fila_h)
+
+            for(let dato of data){
+
+                
+
+                fila = document.createElement("tr")
+                col1 = document.createElement("td")
+                col2 = document.createElement("td")
+                col3 = document.createElement("td")
+                col4 = document.createElement("td")
+
+                col1.textContent = dato.id
+                col2.textContent = dato.userId
+                col3.textContent = dato.title
+                col4.textContent = dato.body
+                fila.appendChild(col1)
+                fila.appendChild(col2)
+                fila.appendChild(col3)
+                fila.appendChild(col4)
+                tabla.appendChild(fila)
+            } 
+
+        }
+        fetchData();
+    </script>
+</body>
+</html>

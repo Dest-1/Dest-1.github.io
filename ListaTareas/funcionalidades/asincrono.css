@@ -1,0 +1,19 @@
+.tabla{
+    border: rgb(83, 82, 82);
+    border-style: solid;
+    padding: 1px;
+    gap: 0;
+    border-collapse: collapse;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.tabla tr td{
+    border: rgb(83, 82, 82);
+    border-style: solid;
+}
+
+.tabla th{
+    border: rgb(83, 82, 82);
+    border-style: solid;
+    background-color: rgb(131, 131, 131);
+}
